@@ -66,7 +66,7 @@ public class Result {
         Session session = factory.openSession();
         Transaction tx = session.beginTransaction();
 
-        session.save(q1);
+        session.save(q1);  // use persist method because save is depricated
         session.save(a1);
         session.save(a2);
         session.save(a3);
