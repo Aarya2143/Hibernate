@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 @Table(name = "certificate")
 public class Certificate {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private long certificateId;
 
     private String title;
@@ -15,8 +15,8 @@ public class Certificate {
 
     private String link;
 
-
-
+    @OneToOne
+    private Student student;
 
     public long getCertificateId() {
         return certificateId;
@@ -50,14 +50,21 @@ public class Certificate {
         this.link = link;
     }
 
+    public Student getStudent() {
+        return student;
+    }
 
-    public Certificate(long certificateId, String title, String about, String link) {
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+
+    public Certificate(long certificateId, String title, String about, String link, Student student) {
         this.certificateId = certificateId;
         this.title = title;
         this.about = about;
         this.link = link;
+        this.student = student;
     }
-
 
     public Certificate() {
         super();

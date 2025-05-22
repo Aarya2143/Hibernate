@@ -25,6 +25,7 @@ public class DemoC {
         c1.setAbout("Congrats vaibhav!!");
 
         s1.setCertificate(c1);
+        c1.setStudent(s1);
 
         Student s2 = new Student();
         s2.setName("Kalyan");
@@ -40,13 +41,15 @@ public class DemoC {
         c2.setAbout("Congrats kalyan!!");
 
         s2.setCertificate(c2);
-
+        c2.setStudent(s2);
 
         Session session = factory.openSession();
         Transaction tx = session.beginTransaction();
 
         session.save(s1);
         session.save(s2);
+        session.save(c1);
+        session.save(c2);
 
         tx.commit();
 

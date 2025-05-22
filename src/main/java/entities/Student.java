@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Student {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private long studentId;
 
     @Column(name = "student_name", length = 30)
@@ -28,7 +28,7 @@ public class Student {
     @Lob
     private String about;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "student")
     @JoinColumn(name = "certificate_id")
     private Certificate certificate;
 
