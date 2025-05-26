@@ -1,4 +1,4 @@
-package FirstCode;
+package first_code;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

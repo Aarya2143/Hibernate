@@ -5,7 +5,7 @@
 
 <hibernate-configuration>
     <session-factory>
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/FirstCode</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/first_code</property>
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">123</property>
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
@@ -15,7 +15,7 @@
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.hbm2ddl.auto">create</property>
 
-        <mapping class="FirstCode.SimplePojoClass"/>
+        <mapping class="first_code.SimplePojoClass"/>
 
     </session-factory>
 </hibernate-configuration>
