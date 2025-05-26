@@ -26,7 +26,7 @@ public class Pagination {
         for(Student l : list){
             System.out.println(l.getStudentId()+" : "+l.getName());
         }
-        
+
         session.close();
         factory.close();
     }

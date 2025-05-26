@@ -21,6 +21,7 @@
       <version>6.6.9.Final</version>
     </dependency>
 
+
     <dependency>
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
@@ -40,5 +41,6 @@
       <version>1.18.38</version>
       <scope>provided</scope>
     </dependency>
+
   </dependencies>
 </project>
